@@ -33,7 +33,6 @@
 		EE37F67C1EEB257A00B492AC /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE37F6791EEB257A00B492AC /* config.plist */; };
 		EE37F67D1EEB257A00B492AC /* Device.js in Resources */ = {isa = PBXBuildFile; fileRef = EE37F67A1EEB257A00B492AC /* Device.js */; };
 		EE37F67E1EEB257A00B492AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE37F67B1EEB257A00B492AC /* Localizable.strings */; };
-		EE37F6831EEB25A500B492AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE37F6821EEB25A500B492AC /* SWRevealViewController.m */; };
 		EE37F6851EEB25D000B492AC /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE37F6841EEB25D000B492AC /* Menu.storyboard */; };
 		EE37F68D1EEB261300B492AC /* VoucherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37F68C1EEB261300B492AC /* VoucherTableViewCell.swift */; };
 		EE37F6941EEB261900B492AC /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37F68E1EEB261900B492AC /* Cache.swift */; };
@@ -124,8 +123,6 @@
 		EE37F67A1EEB257A00B492AC /* Device.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Device.js; sourceTree = "<group>"; };
 		EE37F67B1EEB257A00B492AC /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		EE37F6801EEB25A400B492AC /* ClubeMesa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClubeMesa-Bridging-Header.h"; sourceTree = "<group>"; };
-		EE37F6811EEB25A500B492AC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		EE37F6821EEB25A500B492AC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EE37F6841EEB25D000B492AC /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		EE37F68C1EEB261300B492AC /* VoucherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherTableViewCell.swift; sourceTree = "<group>"; };
 		EE37F68E1EEB261900B492AC /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -326,8 +323,6 @@
 		EE37F67F1EEB258700B492AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EE37F6811EEB25A500B492AC /* SWRevealViewController.h */,
-				EE37F6821EEB25A500B492AC /* SWRevealViewController.m */,
 				EE37F6801EEB25A400B492AC /* ClubeMesa-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
@@ -591,7 +586,6 @@
 				EE37F6611EEB250900B492AC /* TextField.swift in Sources */,
 				EE37F6561EEB250100B492AC /* NumberUtils.swift in Sources */,
 				EE37F6B11EEB261F00B492AC /* ButtonModel.swift in Sources */,
-				EE37F6831EEB25A500B492AC /* SWRevealViewController.m in Sources */,
 				EE37F6D21EEB263500B492AC /* AssinanteService.swift in Sources */,
 				EE37F66C1EEB251000B492AC /* App.swift in Sources */,
 				EE37F6D01EEB263500B492AC /* DispositivoService.swift in Sources */,
