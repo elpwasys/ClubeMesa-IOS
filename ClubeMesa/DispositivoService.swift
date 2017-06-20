@@ -1,0 +1,115 @@
+//
+//  DispositivoService.swift
+//  ClubMesa
+//
+//  Created by Everton Luiz Pascke on 16/04/17.
+//  Copyright © 2017 Everton Luiz Pascke. All rights reserved.
+//
+
+import Foundation
+
+import RxSwift
+import Alamofire
+
+class DispositivoService: Service {
+    
+    static func atualizar(pushToken: String) throws -> Dispositivo {
+        let url = "\(Config.restURL)/dispositivo/atualizar/push/\(pushToken)"
+        let response: DataResponse<Dispositivo> = try Network.request(url, method: .get, encoding: JSONEncoding.default, headers: Device.headers).parse()
+        let result = response.result
+        if result.isFailure {
+            throw result.error!
+        }
+        let model = result.value!
+        Dispositivo.current = model
+        return model
+    }
+    
+    static func verificar(pais: String, prefixo: String, numero: String, codigo: String) throws -> Dispositivo {
+        let url = "\(Config.restURL)/dispositivo/verificar/\(pais)/\(prefixo)/\(numero)/\(codigo)"
+        let response: DataResponse<Dispositivo> = try Network.request(url, method: .get, encoding: JSONEncoding.default, headers: Device.headers).parse()
+        let result = response.result
+        if result.isFailure {
+            throw result.error!
+        }
+        let model = result.value!
+        Dispositivo.current = model
+        return model
+    }
+    
+    static func reenviar(pais: String, prefixo: String, numero: String) throws -> Dispositivo {
+        let url = "\(Config.restURL)/dispositivo/reenviar/\(pais)/\(prefixo)/\(numero)"
+        let response: DataResponse<Dispositivo> = try Network.request(url, method: .get, encoding: JSONEncoding.default, headers: Device.headers).parse()
+        let result = response.result
+        if result.isFailure {
+            throw result.error!
+        }
+        let model = result.value!
+        Dispositivo.current = model
+        return model
+    }
+    
+    static func confirmar(model: Dispositivo) throws -> Dispositivo {
+        let url = "\(Config.restURL)/dispositivo/confirmar"
+        let dictionary = model.dictonary()
+        let response: DataResponse<Dispositivo> = try Network.request(url, method: .post, parameters: dictionary, encoding: JSONEncoding.default, headers: Device.headers).parse()
+        let result = response.result
+        if result.isFailure {
+            throw result.error!
+        }
+        let model = result.value!
+        Dispositivo.current = model
+        return model
+    }
+    
+    class Async {
+        static func atualizar(pushToken: String) -> Observable<Dispositivo> {
+            return Observable.create { observer in
+                do {
+                    let result = try DispositivoService.atualizar(pushToken: pushToken)
+                    observer.onNext(result)
+                    observer.onCompleted()
+                } catch {
+                    observer.onError(error)
+                }
+                return Disposables.create()
+            }
+        }
+        static func verificar(pais: String, prefixo: String, numero: String, codigo: String) -> Observable<Dispositivo> {
+            return Observable.create { observer in
+                do {
+                    let result = try DispositivoService.verificar(pais: pais, prefixo: prefixo, numero: numero, codigo: codigo)
+                    observer.onNext(result)
+                    observer.onCompleted()
+                } catch {
+                    observer.onError(error)
+                }
+                return Disposables.create()
+            }
+        }
+        static func reenviar(pais: String, prefixo: String, numero: String) -> Observable<Dispositivo> {
+            return Observable.create { observer in
+                do {
+                    let result = try DispositivoService.reenviar(pais: pais, prefixo: prefixo, numero: numero)
+                    observer.onNext(result)
+                    observer.onCompleted()
+                } catch {
+                    observer.onError(error)
+                }
+                return Disposables.create()
+            }
+        }
+        static func confirmar(model: Dispositivo) -> Observable<Dispositivo> {
+            return Observable.create { observer in
+                do {
+                    let result = try DispositivoService.confirmar(model: model)
+                    observer.onNext(result)
+                    observer.onCompleted()
+                } catch {
+                    observer.onError(error)
+                }
+                return Disposables.create()
+            }
+        }
+    }
+}

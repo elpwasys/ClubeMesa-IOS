@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+
+  Created by Everton Luiz Pascke on 09/11/16.
+  Copyright © 2016 Everton Luiz Pascke. All rights reserved.
+*/
+
+/* Menu */
+"Menu.Pesquisar" = "Pesquisar";
+"Menu.Assinaturas" = "Assinaturas";
+"Menu.MeusVouchers" = "Meus vouchers";
+"Menu.Mensagens" = "Mensagens";
+"Menu.Configuracao" = "Configuração";
+"Menu.Cache" = "Cache";
+
+/* Label */
+"Label.Assinatura" = "Assinatura";
+"Label.Links" = "Links";
+"Label.Aplicativo" = "Aplicativo";
+"Label.Ok" = "Ok";
+"Label.Sair" = "Sair";
+"Label.Sim" = "Sim";
+"Label.Nao" = "Não";
+"Label.Sobre" = "Sobre";
+"Label.Comercial" = "Comercial";
+"Label.Cache" = "Cache";
+"Label.Limpar" = "Limpar";
+"Label.Versao" = "Versão";
+"Label.Galeria" = "Galeria";
+"Label.Camera" = "Câmera";
+"Label.Cancelar" = "Cancelar";
+"Label.Avaliar" = "Avaliar";
+"Label.Reservar" = "Reservar";
+"Label.ReservaObrigatoria" = "Reservar obrigatória";
+"Label.ate" = "até";
+"Label.UsadoEm" = "Usado em";
+
+
+/* Message */
+
+"Message.ServidorIndisponivel" = "Não foi possível conectar ao servidor.";
+"Message.InternetIndisponivel" = "Não há conexão com a internet";
+"Message.EmailInvalido" = "Email inválido!";
+"Message.CodigoInvalido" = "Código inválido!";
+"Message.SairAplicativo" = "Deseja sair do aplicativo?";
+"Message.Cache" = "O aplicativo armazena dados para tornar a sua navegação mais rápida.\nCaso alguma informação esteja desatualizada, você pode forçar a atualização pressionando o botão 'Limpar'";
+"Message.VoceJaAssinouEsteClub" = "Você já assinou este Club!";

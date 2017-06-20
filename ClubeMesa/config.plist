@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Protocol</key>
+	<string>http</string>
+	<key>Host</key>
+	<string>mlife02.wasys.com.br</string>
+	<key>Port</key>
+	<string>8080</string>
+	<key>ContextApp</key>
+	<string>clubmesa</string>
+	<key>ContextFile</key>
+	<string>file</string>
+	<key>ContextRest</key>
+	<string>rest</string>
+	<key>ContextMobile</key>
+	<string>mobile</string>
+	<key>Link</key>
+	<dict>
+		<key>Mensagem</key>
+		<string>mensagem/index.xhtml</string>
+		<key>ClubConsulta</key>
+		<string>club/consulta.xhtml</string>
+		<key>ClubAssinatura</key>
+		<string>club/assinatura.xhtml</string>
+		<key>Configuracao</key>
+		<string>configuracao.xhtml</string>
+		<key>Avaliacao</key>
+		<string>avaliacao/index.xhtml</string>
+	</dict>
+</dict>
+</plist>
